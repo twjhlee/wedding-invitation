@@ -1,4 +1,5 @@
 import { useKakao } from "../store"
+import { useModal } from "../modal"
 import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"
 import tmapIcon from "../../icons/tmap-icon.png"
@@ -12,6 +13,19 @@ import {
 
 export const Map = () => {
   const kakao = useKakao()
+  const { openModal, closeModal } = useModal()
+
+  const openMapPopup = () => {
+    openModal({
+      className: "image-popup-modal",
+      closeOnClickBackground: true,
+      content: (
+        <div className="image-popup-content" onClick={closeModal}>
+          <img src={locationImage} alt="서울대학교 연구공원 웨딩홀 위치" draggable={false} />
+        </div>
+      ),
+    })
+  }
 
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
@@ -26,7 +40,7 @@ export const Map = () => {
 
   return (
     <>
-      <div className="map-wrapper">
+      <div className="map-wrapper" onClick={openMapPopup}>
         <img
           src={locationImage}
           alt="서울대학교 연구공원 웨딩홀 위치"
