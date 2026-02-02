@@ -1,7 +1,6 @@
 import { Cover } from "./component/cover"
 import { Location } from "./component/location"
 import "./App.scss"
-import { BGEffect } from "./component/bgEffect"
 import { Invitation } from "./component/invitation"
 import { Calendar } from "./component/calendar"
 import { Gallery } from "./component/gallery"
@@ -14,7 +13,6 @@ import { STATIC_ONLY } from "./env"
 function App() {
   return (
     <div className="background">
-      <BGEffect />
       <div className="card-view">
         <LazyDiv className="card-group">
           {/* 표지 */}

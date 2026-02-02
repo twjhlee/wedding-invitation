@@ -9,7 +9,7 @@ dayjs.locale("ko")
 
 export { dayjs }
 
-export const WEDDING_DATE = dayjs.tz("2024-08-24 13:00", "Asia/Seoul")
+export const WEDDING_DATE = dayjs.tz("2026-04-18 17:00", "Asia/Seoul")
 export const WEDDING_DATE_FORMAT = `YYYY년 MMMM D일 dddd A h시${WEDDING_DATE.minute() === 0 ? "" : " m분"}`
 
 // 예식 당월 휴무일. 켈린더에 표시하기 위함.
@@ -37,16 +37,16 @@ export const NMAP_PLACE_ID = 13321741
 // 예: https://place.map.kakao.com/8634826 -> 8634826
 export const KMAP_PLACE_ID = 8634826
 
-export const BRIDE_FULLNAME = "정지원"
-export const BRIDE_FIRSTNAME = "지원"
+export const BRIDE_FULLNAME = "김나현"
+export const BRIDE_FIRSTNAME = "나현"
 export const BRIDE_TITLE = "장녀"
-export const BRIDE_FATHER = "정상원"
-export const BRIDE_MOTHER = "박윤정"
+export const BRIDE_FATHER = "김인철"
+export const BRIDE_MOTHER = "진하경"
 export const BRIDE_INFO = [
   {
     relation: "신부",
     name: BRIDE_FULLNAME,
-    phone: "010-0000-0000",
+    phone: "010-2710-3684",
     account: "우리은행 0000000000000",
   },
   {
@@ -63,28 +63,28 @@ export const BRIDE_INFO = [
   },
 ]
 
-export const GROOM_FULLNAME = "남주호"
-export const GROOM_FIRSTNAME = "주호"
-export const GROOM_TITLE = "차남"
-export const GROOM_FATHER = "남현태"
-export const GROOM_MOTHER = "김현영"
+export const GROOM_FULLNAME = "이준호"
+export const GROOM_FIRSTNAME = "준호"
+export const GROOM_TITLE = "장남"
+export const GROOM_FATHER = "이정훈"
+export const GROOM_MOTHER = "김미정"
 export const GROOM_INFO = [
   {
     relation: "신랑",
     name: GROOM_FULLNAME,
-    phone: "010-0000-0000",
-    account: "하나은행 00000000000000",
+    phone: "010-2871-1839",
+    account: "우리은행 1002-460-511685",
   },
   {
     relation: "신랑 아버지",
     name: GROOM_FATHER,
-    phone: "010-0000-0000",
+    phone: "010-2841-1839",
     account: "신한은행 000000000000",
   },
   {
     relation: "신랑 어머니",
     name: GROOM_MOTHER,
-    phone: "010-0000-0000",
+    phone: "010-2811-1839",
     account: "국민은행 000000000000",
   },
 ]
