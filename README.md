@@ -148,3 +148,4 @@ npm run build
 - `src/const.ts`에 사용법 주석 추가
 - [Hotfix] 일부 의존성 패키지의 버전 상향
   - 본 프로젝트는 React Server Component를 사용하지 않아 React2Shell 취약점의 영향을 받지 않습니다. 다만, 커스터마이징 과정에서 해당 기능이 사용될 가능성을 사전에 차단하기 위해 관련 패키지를 업데이트합니다.
+
