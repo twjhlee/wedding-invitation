@@ -5,6 +5,51 @@ import { GALLERY_IMAGES } from "../../images"
 
 const IMAGES_PER_PAGE = 9
 
+const ImagePopupContent = ({
+  initialIndex,
+  onClose,
+}: {
+  initialIndex: number
+  onClose: () => void
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex)
+
+  const goToPrev = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentIndex((i) => Math.max(0, i - 1))
+  }
+
+  const goToNext = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCurrentIndex((i) => Math.min(GALLERY_IMAGES.length - 1, i + 1))
+  }
+
+  return (
+    <div className="image-popup-content" onClick={onClose}>
+      <button
+        className="popup-nav prev"
+        onClick={goToPrev}
+        disabled={currentIndex === 0}
+      >
+        ‹
+      </button>
+      <img
+        src={GALLERY_IMAGES[currentIndex]}
+        alt="gallery"
+        draggable={false}
+        onClick={(e) => e.stopPropagation()}
+      />
+      <button
+        className="popup-nav next"
+        onClick={goToNext}
+        disabled={currentIndex === GALLERY_IMAGES.length - 1}
+      >
+        ›
+      </button>
+    </div>
+  )
+}
+
 export const Gallery = () => {
   const { openModal, closeModal } = useModal()
   const [page, setPage] = useState(0)
@@ -18,15 +63,11 @@ export const Gallery = () => {
     })
   }, [])
 
-  const openImagePopup = (image: string) => {
+  const openImagePopup = (imageIndex: number) => {
     openModal({
       className: "image-popup-modal",
       closeOnClickBackground: true,
-      content: (
-        <div className="image-popup-content" onClick={closeModal}>
-          <img src={image} alt="gallery" draggable={false} />
-        </div>
-      ),
+      content: <ImagePopupContent initialIndex={imageIndex} onClose={closeModal} />,
     })
   }
 
@@ -51,7 +92,7 @@ export const Gallery = () => {
             <div
               key={page * IMAGES_PER_PAGE + idx}
               className="gallery-item"
-              onClick={() => openImagePopup(image)}
+              onClick={() => openImagePopup(page * IMAGES_PER_PAGE + idx)}
             >
               <img src={image} alt={`gallery-${idx}`} draggable={false} />
             </div>
