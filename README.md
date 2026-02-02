@@ -4,7 +4,7 @@
 
 이준호 ❤️ 김나현 청첩장입니다.
 
-https://twjhlee.github.io/wedding-invitation"
+https://twjhlee.github.io/wedding-invitation
 
 실제 저희 결혼식을 위해 직접 디자인한 청첩장이며, 결혼식이 끝난 현재 전화번호, 계좌번호 등의 개인정보를 제외한 상태입니다. 사진 또한 현재 AI 생성 사진으로 대체되었으나, 당시에는 저희의 실제 웨딩 사진이 사용되었습니다.
 
