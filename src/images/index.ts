@@ -1,16 +1,18 @@
-import coverImage from "./cover.png"
-import image1 from "./image1.png"
-import image2 from "./image2.png"
-import image3 from "./image3.png"
-import image4 from "./image4.png"
-import image5 from "./image5.png"
-import image6 from "./image6.png"
-import image7 from "./image7.png"
-import image8 from "./image8.png"
-import image9 from "./image9.png"
-import image10 from "./image10.png"
-import image11 from "./image11.png"
-import image12 from "./image12.png"
+import coverImage from "./cover.jpg"
+import image1 from "./img1.jpg"
+import image2 from "./img2.jpg"
+import image3 from "./img3.jpg"
+import image4 from "./img4.jpg"
+import image5 from "./img5.jpg"
+import image6 from "./img6.jpg"
+import image7 from "./img7.jpg"
+import image8 from "./img8.jpg"
+import image9 from "./img9.jpg"
+import image10 from "./img10.jpg"
+import image11 from "./img11.jpg"
+import image12 from "./img12.jpg"
+import image13 from "./img13.jpg"
+import image14 from "./img14.jpg"
 
 export const COVER_IMAGE = coverImage
 
@@ -27,4 +29,6 @@ export const GALLERY_IMAGES = [
   image10,
   image11,
   image12,
+  image13,
+  image14,
 ]
