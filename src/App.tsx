@@ -6,7 +6,6 @@ import { Calendar } from "./component/calendar"
 import { Gallery } from "./component/gallery"
 import { Information } from "./component/information"
 import { LazyDiv } from "./component/lazyDiv"
-import { ShareButton } from "./component/shareButton"
 
 function App() {
   return (
@@ -38,7 +37,6 @@ function App() {
           <Information />
         </LazyDiv>
 
-        <ShareButton />
       </div>
     </div>
   )
