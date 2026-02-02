@@ -1,9 +1,32 @@
 .gallery {
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .gallery-nav {
+    font-size: 2rem;
+    color: var(--theme-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.2s ease;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      opacity: 0.7;
+    }
+  }
+
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    padding: 0 0.5rem;
+    flex: 1;
 
     .gallery-item {
       aspect-ratio: 1;
@@ -20,6 +43,30 @@
 
       &:hover img {
         transform: scale(1.05);
+      }
+    }
+  }
+
+  .gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: var(--dark-grey-color);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &.active {
+        background-color: var(--theme-color);
+      }
+
+      &:hover:not(.active) {
+        background-color: var(--alt-color);
       }
     }
   }
