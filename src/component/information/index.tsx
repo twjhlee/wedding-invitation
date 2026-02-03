@@ -10,7 +10,7 @@ export const Information1 = () => {
     <>
       <h2 className="english">Information</h2>
       <div className="info-card">
-        <div className="label">식사 안내</div>
+        <div className="label text-white-color">식사 안내</div>
         <div className="content">
           식사시간: 16시 30분 ~ 18시 30분
           <br />
@@ -27,7 +27,7 @@ export const Information2 = () => {
   return (
     <>
       <div className="info-card">
-        <div className="label">마음 전하기</div>
+        <div className="label text-white-color">마음 전하기</div>
         <div className="content">
           참석이 어려워 직접 축하해주지 못하는
           <br />
@@ -39,6 +39,7 @@ export const Information2 = () => {
         <div className="break" />
 
         <Button
+          className="bg-alt-color text-white-color"
           style={{ width: "100%" }}
           onClick={() => {
             openModal({
@@ -92,6 +93,7 @@ export const Information2 = () => {
         </Button>
         <div className="break" />
         <Button
+          className="bg-alt-color text-white-color"
           style={{ width: "100%" }}
           onClick={() => {
             openModal({

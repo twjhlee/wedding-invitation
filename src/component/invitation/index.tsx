@@ -56,6 +56,7 @@ export const Invitation = () => {
       <div className="break" />
 
       <Button
+        className="bg-alt-color text-white-color"
         onClick={() => {
           openModal({
             className: "contact-modal",
