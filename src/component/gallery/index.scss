@@ -79,6 +79,8 @@
   max-height: 100vh;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .header {
     position: absolute;
@@ -116,10 +118,15 @@
 
   .content {
     padding: 0;
-    max-height: 100vh;
+    flex: 1;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer {
+    display: none;
   }
 
   .image-popup-content {
