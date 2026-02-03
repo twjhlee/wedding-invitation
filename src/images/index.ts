@@ -1,4 +1,5 @@
 import coverImage from "./cover.jpg"
+import image0 from "./img0.jpg"
 import image1 from "./img1.jpg"
 import image2 from "./img2.jpg"
 import image3 from "./img3.jpg"
@@ -25,6 +26,7 @@ import image23 from "./img23.jpg"
 import image24 from "./img24.jpg"
 
 export const COVER_IMAGE = coverImage
+export const INTRO_IMAGE = image0
 
 export const GALLERY_IMAGES = [
   image1,

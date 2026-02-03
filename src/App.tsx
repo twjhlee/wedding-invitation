@@ -5,12 +5,18 @@ import { Invitation } from "./component/invitation"
 import { Calendar } from "./component/calendar"
 import { Gallery } from "./component/gallery"
 import { Information } from "./component/information"
+import { Intro } from "./component/intro"
 import { LazyDiv } from "./component/lazyDiv"
 
 function App() {
   return (
     <div className="background">
       <div className="card-view">
+        <LazyDiv className="card-group">
+          {/* 인트로 */}
+          <Intro />
+        </LazyDiv>
+
         <LazyDiv className="card-group">
           {/* 표지 */}
           <Cover />
