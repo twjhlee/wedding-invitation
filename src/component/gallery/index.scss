@@ -80,6 +80,27 @@
   width: 100vw;
   height: 100vh;
 
+  .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    z-index: 10;
+    padding: 1rem;
+
+    .close-button-wrapper .close-button {
+      width: 2rem;
+      height: 2rem;
+
+      &::before,
+      &::after {
+        background-color: var(--white-color);
+        width: 0.2rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+      }
+    }
+  }
+
   .content {
     padding: 0;
     max-height: 100vh;
