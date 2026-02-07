@@ -20,12 +20,13 @@
   --light-grey-color: #eaeaea;
   --light-color: #f9f9f9;
   --white-color: #ffffff;
+  --pink-color: #f8989d;
   --red-color: #ff0000;
 
   font-family: "MapoGoldenPier";
-  font-size: 20px;
+  font-size: 18px;
   @media (max-width: 500px) {
-    font-size: 4vw;
+    font-size: 3.6vw;
   }
 }
 
@@ -46,6 +47,7 @@ $colors: (
   light-grey-color: var(--light-grey-color),
   light-color: var(--light-color),
   white-color: var(--white-color),
+  pink-color: var(--pink-color),
   red-color: var(--red-color),
 );
 
@@ -76,7 +78,7 @@ $colors: (
 
 button {
   font-family: "MapoGoldenPier";
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: none;
   background-color: transparent;
   padding: 0;
