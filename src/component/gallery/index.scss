@@ -118,7 +118,6 @@
 
   .content {
     padding: 0;
-    padding-top: 20vh;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -141,7 +140,7 @@
 
     img {
       max-width: 98vw;
-      max-height: 150vh;
+      max-height: 90vh;
       object-fit: contain;
       cursor: default;
     }
