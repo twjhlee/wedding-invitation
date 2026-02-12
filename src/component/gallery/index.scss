@@ -118,11 +118,11 @@
 
   .content {
     padding: 0;
-    padding-bottom: 10vh;
+    padding-top: 20vh;
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     overflow: hidden;
   }
 
@@ -141,7 +141,7 @@
 
     img {
       max-width: 90vw;
-      max-height: 90vh;
+      max-height: 150vh;
       object-fit: contain;
       cursor: default;
     }
