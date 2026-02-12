@@ -39,6 +39,11 @@
       .header {
         background-color: var(--theme-bg-color);
       }
+
+      .content {
+        max-height: 100vh;
+        overflow: hidden;
+      }
     }
 
     .header {
