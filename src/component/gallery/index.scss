@@ -118,10 +118,11 @@
 
   .content {
     padding: 0;
+    padding-bottom: 10vh;
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     overflow: hidden;
   }
 
