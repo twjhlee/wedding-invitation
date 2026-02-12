@@ -23,15 +23,19 @@
   justify-content: center;
   align-items: center;
 
+  &:has(.image-popup-modal) {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
   > .modal {
-    background-color: var(--light-color);
+    background-color: var(--theme-bg-color);
     animation-name: modal-fade-in;
     animation-duration: 0.5s;
     opacity: 1;
 
     .header {
       padding: 0.5rem;
-      background-color: var(--light-color);
+      background-color: var(--theme-bg-color);
       z-index: 7;
       .close-button-wrapper {
         display: flex;
