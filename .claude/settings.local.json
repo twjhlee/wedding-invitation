@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell:*)",
+      "Bash(where.exe powershell)",
+      "Bash(cmd.exe /c \"dir /s /b %USERPROFILE%\\\\*PowerShell_profile.ps1 2>nul\")"
+    ]
+  }
+}
