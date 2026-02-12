@@ -28,14 +28,22 @@
   }
 
   > .modal {
-    background-color: var(--theme-bg-color);
+    background-color: var(--light-color);
     animation-name: modal-fade-in;
     animation-duration: 0.5s;
     opacity: 1;
 
+    &.image-popup-modal {
+      background-color: var(--theme-bg-color);
+
+      .header {
+        background-color: var(--theme-bg-color);
+      }
+    }
+
     .header {
       padding: 0.5rem;
-      background-color: var(--theme-bg-color);
+      background-color: var(--light-color);
       z-index: 7;
       .close-button-wrapper {
         display: flex;
