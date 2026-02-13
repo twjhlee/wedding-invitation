@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { LazyDiv } from "../lazyDiv"
 import { useModal } from "../modal"
 import { GALLERY_IMAGES } from "../../images"
 
 const IMAGES_PER_PAGE = 9
+const SWIPE_THRESHOLD = 50
 
 const ImagePopupContent = ({
   initialIndex,
@@ -13,6 +14,7 @@ const ImagePopupContent = ({
   onClose: () => void
 }) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
+  const touchStartX = useRef<number | null>(null)
 
   const goToPrev = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -24,8 +26,30 @@ const ImagePopupContent = ({
     setCurrentIndex((i) => Math.min(GALLERY_IMAGES.length - 1, i + 1))
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) >= SWIPE_THRESHOLD) {
+      if (diff > 0) {
+        setCurrentIndex((i) => Math.min(GALLERY_IMAGES.length - 1, i + 1))
+      } else {
+        setCurrentIndex((i) => Math.max(0, i - 1))
+      }
+    }
+    touchStartX.current = null
+  }
+
   return (
-    <div className="image-popup-content" onClick={onClose}>
+    <div
+      className="image-popup-content"
+      onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <button
         className="popup-nav prev"
         onClick={goToPrev}
@@ -54,6 +78,7 @@ export const Gallery = () => {
   const { openModal, closeModal } = useModal()
   const [page, setPage] = useState(0)
   const totalPages = Math.ceil(GALLERY_IMAGES.length / IMAGES_PER_PAGE)
+  const touchStartX = useRef<number | null>(null)
 
   useEffect(() => {
     // preload images
@@ -76,6 +101,23 @@ export const Gallery = () => {
     (page + 1) * IMAGES_PER_PAGE
   )
 
+  const handleGalleryTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleGalleryTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) >= SWIPE_THRESHOLD) {
+      if (diff > 0 && page < totalPages - 1) {
+        setPage((p) => p + 1)
+      } else if (diff < 0 && page > 0) {
+        setPage((p) => p - 1)
+      }
+    }
+    touchStartX.current = null
+  }
+
   return (
     <LazyDiv className="card gallery">
       <h2 className="english">Gallery</h2>
@@ -87,7 +129,11 @@ export const Gallery = () => {
         >
           ‹
         </button>
-        <div className="gallery-grid">
+        <div
+          className="gallery-grid"
+          onTouchStart={handleGalleryTouchStart}
+          onTouchEnd={handleGalleryTouchEnd}
+        >
           {currentImages.map((image, idx) => (
             <div
               key={page * IMAGES_PER_PAGE + idx}
