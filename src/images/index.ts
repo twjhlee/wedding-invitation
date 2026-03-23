@@ -30,6 +30,9 @@ import image27 from "./img27.jpg"
 import image28 from "./img28.jpg"
 import image29 from "./img29.jpg"
 import image30 from "./img30.jpg"
+import image31 from "./img31.jpg"
+import image32 from "./img32.jpg"
+import image33 from "./img33.jpg"
 
 export const COVER_IMAGE = coverImage
 export const INTRO_IMAGE = image0
@@ -55,4 +58,12 @@ export const GALLERY_IMAGES = [
   image4,
   image10,
   image15,
+  image26,
+  image27,
+  image28,
+  image29,
+  image30,
+  image31,
+  image32,
+  image33,
 ]
