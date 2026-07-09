@@ -37,54 +37,54 @@ export const NMAP_PLACE_ID = 13321741
 // 예: https://place.map.kakao.com/8634826 -> 8634826
 export const KMAP_PLACE_ID = 8634826
 
-export const BRIDE_FULLNAME = "김나현"
-export const BRIDE_FIRSTNAME = "나현"
-export const BRIDE_TITLE = "장녀"
-export const BRIDE_FATHER = "김인철"
-export const BRIDE_MOTHER = "진하경"
+export const BRIDE_FULLNAME = "null"
+export const BRIDE_FIRSTNAME = "null"
+export const BRIDE_TITLE = "null"
+export const BRIDE_FATHER = "null"
+export const BRIDE_MOTHER = "null"
 export const BRIDE_INFO = [
   {
     relation: "신부",
     name: BRIDE_FULLNAME,
-    phone: "010-2710-3684",
-    account: "우리은행 1002-659-695658",
+    phone: "010-****-****",
+    account:"*",
   },
   {
     relation: "신부 아버지",
     name: BRIDE_FATHER,
-    phone: "010-5216-5379",
-    account: "국민은행 086-21-0476-270",
+    phone: "010-****-****",
+    account: "*",
   },
   {
     relation: "신부 어머니",
     name: BRIDE_MOTHER,
-    phone: "010-5030-3684",
-    account: "국민은행 459602-01-181818",
+    phone: "010-****-****",
+    account: "*",
   },
 ]
 
-export const GROOM_FULLNAME = "이준호"
-export const GROOM_FIRSTNAME = "준호"
+export const GROOM_FULLNAME = "null"
+export const GROOM_FIRSTNAME = "null"
 export const GROOM_TITLE = "장남"
-export const GROOM_FATHER = "이정훈"
-export const GROOM_MOTHER = "김미정"
+export const GROOM_FATHER = "null"
+export const GROOM_MOTHER = "null"
 export const GROOM_INFO = [
   {
     relation: "신랑",
     name: GROOM_FULLNAME,
-    phone: "010-2871-1839",
-    account: "우리은행 1002-460-511685",
+    phone: "010-****-****",
+    account: "*",
   },
   {
     relation: "신랑 아버지",
     name: GROOM_FATHER,
-    phone: "010-2841-1839",
-    account: "농협은행 954-02-111034",
+    phone: "010-****-****",
+    account: "*",
   },
   {
     relation: "신랑 어머니",
     name: GROOM_MOTHER,
-    phone: "010-2811-1839",
-    account: "농협은행 954-02-280044",
+    phone: "010-****-****",
+    account: "*",
   },
 ]
